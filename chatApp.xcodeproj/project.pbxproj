@@ -15,6 +15,7 @@
 		3769A5FB1A290B06003615B9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3769A5F91A290B06003615B9 /* LaunchScreen.xib */; };
 		3769A6071A290B06003615B9 /* chatAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3769A6061A290B06003615B9 /* chatAppTests.swift */; };
 		377067A81A37CF27007CB6DB /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377067A71A37CF27007CB6DB /* Backend.swift */; };
+		37E244A71A3B506D00E09990 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E244A61A3B506D00E09990 /* SwiftyJSON.swift */; };
 		5C5B7060835DF4A48738BD91 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 837F707F47F8A1110011244D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		3769A6061A290B06003615B9 /* chatAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatAppTests.swift; sourceTree = "<group>"; };
 		377067A71A37CF27007CB6DB /* Backend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
 		377067AA1A37D04A007CB6DB /* ChatApp-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ChatApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		37E244A61A3B506D00E09990 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		397639F253348F84FDB7C3D1 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		837F707F47F8A1110011244D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6FAECDC5ECCFC3D674B43A6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		3769A5EA1A290B06003615B9 /* chatApp */ = {
 			isa = PBXGroup;
 			children = (
+				37E244A61A3B506D00E09990 /* SwiftyJSON.swift */,
 				3769A5ED1A290B06003615B9 /* AppDelegate.swift */,
 				3769A5F21A290B06003615B9 /* ViewController.swift */,
 				3769A5F41A290B06003615B9 /* Main.storyboard */,
@@ -282,6 +285,7 @@
 				377067A81A37CF27007CB6DB /* Backend.swift in Sources */,
 				3769A5F31A290B06003615B9 /* ViewController.swift in Sources */,
 				3769A5EE1A290B06003615B9 /* AppDelegate.swift in Sources */,
+				37E244A71A3B506D00E09990 /* SwiftyJSON.swift in Sources */,
 				3769A5F11A290B06003615B9 /* chatApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
