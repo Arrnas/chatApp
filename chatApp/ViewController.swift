@@ -98,7 +98,7 @@ class ViewController: UIViewController {
         return landscape() ? keyboardRect.width : keyboardRect.height
     }
     
-    func viewHeight() -> CGFloat {
+    func viewHeight() -> CGFloat { // TODO: ios8 screen size depends on orientation http://stackoverflow.com/questions/24150359/is-uiscreen-mainscreen-bounds-size-becoming-orientation-dependent-in-ios8
         return landscape() ? view.frame.width : view.frame.height
     }
     
