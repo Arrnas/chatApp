@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "chatApp/ViewController.swift"
-            timestampString = "440275034.756747"
+            timestampString = "440418860.151552"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
             landmarkName = "handleConstraints()"
             landmarkType = "5">
          </BreakpointContent>

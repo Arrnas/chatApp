@@ -18,7 +18,7 @@ class Backend {
         return Static.instance
     }
     
-    func login(username: String,password: String) {
+    func login(username: String,password: String,callback: (success:Bool)->()) {
         let params = ["username":username,"password":password]
         manager.POST("login",
             parameters: params,
@@ -26,18 +26,23 @@ class Backend {
                 let json = JSON(responseObject)
                 if let token = json["access_token"].string {
                     self.access_token = token
+                    callback(success: true)
                 } else {
                     println(json.error)
+                    callback(success: false)
                 }
                 
             },
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
                 println("Error: " + error.localizedDescription)
+                callback(success: false)
         })
     }
-    func register(username: String,password: String,email: String,callback: (success:Bool)->()) {
+    func register(username: String,password: String,passConfirm: String,email: String,callback: (success:Bool)->()) {
         let UUID = NSUUID().UUIDString
-        let params = ["username":username,"password":password,"email":email,"deviceid":UUID]
+        println("UUID = \(UUID)")
+        let user = ["username":username,"password":password,"password_confirmation":passConfirm,"email":email,"deviceid":UUID]
+        let params = ["user":user]
         manager.POST("users",
             parameters: params,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
@@ -50,6 +55,22 @@ class Backend {
             failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
                 println("Error: " + error.localizedDescription)
                 callback(success: false)
+        })
+    }
+    func fetchFriends(callback: ((success: Bool) -> ())?) {
+        manager.GET("friends?access_token=\(access_token)",
+            parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                if (operation.response.statusCode == 200) {
+                    println("response: \(responseObject)")
+                    if((callback) != nil) { callback!(success: true) }
+                } else {
+                    if((callback) != nil) { callback!(success: false) }
+                }
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
+                if((callback) != nil) { callback!(success: false) }
         })
     }
 }

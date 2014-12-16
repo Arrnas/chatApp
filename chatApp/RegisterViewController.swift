@@ -1,4 +1,14 @@
 //
+//  RegisterViewController.swift
+//  chatApp
+//
+//  Created by Arnas Dundulis on 12/16/14.
+//  Copyright (c) 2014 Arnas Dundulis. All rights reserved.
+//
+
+import Foundation
+
+//
 //  ViewController.swift
 //  chatApp
 //
@@ -8,20 +18,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    @IBOutlet weak var prisijungimasTopVertical: NSLayoutConstraint!
-    @IBOutlet weak var vardasTopVertical: NSLayoutConstraint!
-    @IBOutlet weak var containerHeight: NSLayoutConstraint!
+class RegisterViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    let backend = Backend.sharedInstance;
+    @IBOutlet weak var passwordConfirmation: UITextField!
     
+    let backend = Backend.sharedInstance;
     var selectedFieldsYPos : CGFloat?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -33,17 +41,16 @@ class ViewController: UIViewController {
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
-    @IBAction func login(sender: AnyObject) {
-        view.endEditing(true)
-        if ( !nameField.text.isEmpty && !passwordField.text.isEmpty ){
-            backend.login(nameField.text, password: passwordField.text,
-                callback: { success in
-                    if(success) {
-                        self.segwayToMainVC()
-                    } else {
-                        self.showErrorDialog()
-                    }
-                    })
+    @IBAction func cancelModal(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func register(sender: AnyObject) {
+        if (!nameField.text.isEmpty && !emailField.text.isEmpty && !passwordField.text.isEmpty && !passwordConfirmation.text.isEmpty) {
+            backend.register(nameField.text, password: passwordField.text, passConfirm: passwordConfirmation.text, email: emailField.text, callback: { success in
+                if (success) { self.login() }
+                else { self.showErrorDialog() }
+            })
         } else {
             let alert = UIAlertView()
             alert.title = "Error"
@@ -53,6 +60,16 @@ class ViewController: UIViewController {
         }
     }
     
+    func login() {
+        backend.login(nameField.text, password: passwordField.text, callback: { success in
+            if(success) {
+                self.segwayToMainVC()
+            } else {
+                self.showErrorDialog()
+            }
+        })
+    }
+    
     func segwayToMainVC() {
         self.performSegueWithIdentifier("toTabVC", sender: self)
     }
@@ -60,7 +77,7 @@ class ViewController: UIViewController {
     func showErrorDialog() {
         let alert = UIAlertView()
         alert.title = "Error"
-        alert.message = "Login failed"
+        alert.message = "Registration failed"
         alert.addButtonWithTitle("Oh noes")
         alert.show()
     }
@@ -77,9 +94,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func willRotateToInterfaceOrientation(toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
-        handleConstraints()
-    }
     
     func iOS7() -> Bool {
         switch UIDevice.currentDevice().systemVersion.compare("8.0.0", options: NSStringCompareOptions.NumericSearch) {
@@ -99,17 +113,6 @@ class ViewController: UIViewController {
         return false
     }
     
-    func handleConstraints() {
-        if (iOS7() && landscape()) {
-            prisijungimasTopVertical.constant = 10
-            vardasTopVertical.constant = 22
-            containerHeight.constant = 324
-        } else if (iOS7() && !landscape()) {
-            prisijungimasTopVertical.constant = 20
-            vardasTopVertical.constant = 62
-            containerHeight.constant = 364
-        }
-    }
     
     func keyboardWillShow(notification: NSNotification) {
         println("keyboard shown")
@@ -119,7 +122,7 @@ class ViewController: UIViewController {
             println("bottom inset = \(keyboardHeight(keyboardSize))")
             let contentInsets = UIEdgeInsets(top: 0, left: 0, bottom: keyboardHeight(keyboardSize), right: 0)
             scrollView.contentInset = contentInsets
-            //scrollToDisplayTextfield(keyboardSize)
+            scrollToDisplayTextfield(keyboardSize)
         }
     }
     
@@ -147,7 +150,7 @@ class ViewController: UIViewController {
             scrollView.setContentOffset(point, animated: true)
         }
     }
-
-
+    
+    
 }
 

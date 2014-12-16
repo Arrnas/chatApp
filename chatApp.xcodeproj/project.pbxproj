@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3717CD1B1A4024EA00B87B79 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717CD1A1A4024EA00B87B79 /* RegisterViewController.swift */; };
+		3717CD1D1A40427500B87B79 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717CD1C1A40427500B87B79 /* FriendsTableViewController.swift */; };
 		3769A5EE1A290B06003615B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3769A5ED1A290B06003615B9 /* AppDelegate.swift */; };
 		3769A5F11A290B06003615B9 /* chatApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3769A5EF1A290B06003615B9 /* chatApp.xcdatamodeld */; };
 		3769A5F31A290B06003615B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3769A5F21A290B06003615B9 /* ViewController.swift */; };
@@ -32,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3717CD1A1A4024EA00B87B79 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		3717CD1C1A40427500B87B79 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		3769A5E81A290B06003615B9 /* chatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3769A5EC1A290B06003615B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3769A5ED1A290B06003615B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				3769A5EB1A290B06003615B9 /* Supporting Files */,
 				377067A71A37CF27007CB6DB /* Backend.swift */,
 				377067AA1A37D04A007CB6DB /* ChatApp-Bridging-Header.h */,
+				3717CD1A1A4024EA00B87B79 /* RegisterViewController.swift */,
+				3717CD1C1A40427500B87B79 /* FriendsTableViewController.swift */,
 			);
 			path = chatApp;
 			sourceTree = "<group>";
@@ -308,7 +314,9 @@
 				377067A81A37CF27007CB6DB /* Backend.swift in Sources */,
 				3769A5F31A290B06003615B9 /* ViewController.swift in Sources */,
 				3769A5EE1A290B06003615B9 /* AppDelegate.swift in Sources */,
+				3717CD1B1A4024EA00B87B79 /* RegisterViewController.swift in Sources */,
 				37E244A71A3B506D00E09990 /* SwiftyJSON.swift in Sources */,
+				3717CD1D1A40427500B87B79 /* FriendsTableViewController.swift in Sources */,
 				3769A5F11A290B06003615B9 /* chatApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
