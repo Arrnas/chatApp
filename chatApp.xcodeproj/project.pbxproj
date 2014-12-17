@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370461DF1A4105EA00DAA6C6 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370461DE1A4105EA00DAA6C6 /* SearchTableViewController.swift */; };
+		370461E11A4108FB00DAA6C6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370461E01A4108FB00DAA6C6 /* User.swift */; };
+		370461E31A41201800DAA6C6 /* UserAddDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370461E21A41201800DAA6C6 /* UserAddDetailViewController.swift */; };
+		370461E51A412E3800DAA6C6 /* UserGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370461E41A412E3800DAA6C6 /* UserGroupViewController.swift */; };
+		370461E71A41395A00DAA6C6 /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370461E61A41395A00DAA6C6 /* GroupTableViewController.swift */; };
+		370461E91A413ACE00DAA6C6 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370461E81A413ACE00DAA6C6 /* Group.swift */; };
+		370461EB1A414F4B00DAA6C6 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370461EA1A414F4B00DAA6C6 /* Message.swift */; };
+		370461ED1A41500600DAA6C6 /* MessagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370461EC1A41500600DAA6C6 /* MessagesTableViewController.swift */; };
 		3717CD1B1A4024EA00B87B79 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717CD1A1A4024EA00B87B79 /* RegisterViewController.swift */; };
 		3717CD1D1A40427500B87B79 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3717CD1C1A40427500B87B79 /* FriendsTableViewController.swift */; };
 		3769A5EE1A290B06003615B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3769A5ED1A290B06003615B9 /* AppDelegate.swift */; };
@@ -34,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		370461DE1A4105EA00DAA6C6 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		370461E01A4108FB00DAA6C6 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		370461E21A41201800DAA6C6 /* UserAddDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAddDetailViewController.swift; sourceTree = "<group>"; };
+		370461E41A412E3800DAA6C6 /* UserGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserGroupViewController.swift; sourceTree = "<group>"; };
+		370461E61A41395A00DAA6C6 /* GroupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupTableViewController.swift; sourceTree = "<group>"; };
+		370461E81A413ACE00DAA6C6 /* Group.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		370461EA1A414F4B00DAA6C6 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		370461EC1A41500600DAA6C6 /* MessagesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesTableViewController.swift; sourceTree = "<group>"; };
 		3717CD1A1A4024EA00B87B79 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3717CD1C1A40427500B87B79 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		3769A5E81A290B06003615B9 /* chatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +131,14 @@
 				377067AA1A37D04A007CB6DB /* ChatApp-Bridging-Header.h */,
 				3717CD1A1A4024EA00B87B79 /* RegisterViewController.swift */,
 				3717CD1C1A40427500B87B79 /* FriendsTableViewController.swift */,
+				370461DE1A4105EA00DAA6C6 /* SearchTableViewController.swift */,
+				370461E01A4108FB00DAA6C6 /* User.swift */,
+				370461E21A41201800DAA6C6 /* UserAddDetailViewController.swift */,
+				370461E41A412E3800DAA6C6 /* UserGroupViewController.swift */,
+				370461E61A41395A00DAA6C6 /* GroupTableViewController.swift */,
+				370461E81A413ACE00DAA6C6 /* Group.swift */,
+				370461EA1A414F4B00DAA6C6 /* Message.swift */,
+				370461EC1A41500600DAA6C6 /* MessagesTableViewController.swift */,
 			);
 			path = chatApp;
 			sourceTree = "<group>";
@@ -311,13 +335,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				370461E31A41201800DAA6C6 /* UserAddDetailViewController.swift in Sources */,
+				370461E51A412E3800DAA6C6 /* UserGroupViewController.swift in Sources */,
 				377067A81A37CF27007CB6DB /* Backend.swift in Sources */,
+				370461DF1A4105EA00DAA6C6 /* SearchTableViewController.swift in Sources */,
+				370461ED1A41500600DAA6C6 /* MessagesTableViewController.swift in Sources */,
 				3769A5F31A290B06003615B9 /* ViewController.swift in Sources */,
+				370461E71A41395A00DAA6C6 /* GroupTableViewController.swift in Sources */,
+				370461E91A413ACE00DAA6C6 /* Group.swift in Sources */,
 				3769A5EE1A290B06003615B9 /* AppDelegate.swift in Sources */,
 				3717CD1B1A4024EA00B87B79 /* RegisterViewController.swift in Sources */,
+				370461E11A4108FB00DAA6C6 /* User.swift in Sources */,
 				37E244A71A3B506D00E09990 /* SwiftyJSON.swift in Sources */,
 				3717CD1D1A40427500B87B79 /* FriendsTableViewController.swift in Sources */,
 				3769A5F11A290B06003615B9 /* chatApp.xcdatamodeld in Sources */,
+				370461EB1A414F4B00DAA6C6 /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

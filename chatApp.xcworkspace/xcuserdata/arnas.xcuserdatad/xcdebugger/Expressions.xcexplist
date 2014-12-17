@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "chatApp.UserGroupViewController.viewWillAppear (chatApp.UserGroupViewController)(Swift.Bool) -&gt; ():UserGroupViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.user">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "chatApp.MessagesTableViewController.tableView (chatApp.MessagesTableViewController)(ObjectiveC.UITableView, cellForRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ObjectiveC.UITableViewCell:MessagesTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.group">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "chatApp.Backend.(fetchGroups (chatApp.Backend) -&gt; (Swift.Optional&lt;(success : Swift.Bool, group : Swift.Optional&lt;chatApp.Group&gt;) -&gt; ()&gt;) -&gt; ()).(closure #1):Backend.swift">
+      </ContextState>
+      <ContextState
+         contextName = "chatApp.FriendsTableViewController.prepareForSegue (chatApp.FriendsTableViewController)(ObjectiveC.UIStoryboardSegue, sender : Swift.Optional&lt;Swift.AnyObject&gt;) -&gt; ():FriendsTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.selectedUser">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
