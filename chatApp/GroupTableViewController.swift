@@ -40,8 +40,9 @@ class GroupTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("groupCell") as UITableViewCell
-        
-        cell.textLabel!.text! = groups[indexPath.row].title
+        if (indexPath.row < groups.count) {
+            cell.textLabel!.text! = groups[indexPath.row].title
+        }
         
         return cell
     }
